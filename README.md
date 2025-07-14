@@ -14,10 +14,6 @@ ODS Alinhados:
 
 * Guilherme Henrique Braga e Silva
 
-## Orientador
-
-* Juliana Padilha
-
 ## Instruções de utilização
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
@@ -36,11 +32,11 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 
 # Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="backend/README.md"> Código Fonte</a></li>
 
 # Apresentação
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+<li><a href="docs/presentation/README.md"> Apresentação da solução</a></li>
 
 
 ## Histórico de versões
