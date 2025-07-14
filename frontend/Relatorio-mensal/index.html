@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relatório Mensal - NutriHealth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="header">
+  <a href="../Tela-de-Perfil/index.html" class="back-arrow" aria-label="Voltar para a página anterior">
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
+  </a>
+  <a href="../Tela-inicial/index.html" class="logo">NutriHealth</a>
+</header>
+
+  <main>
+    <section class="relatorio-header">
+      <h2>Relatório Mensal</h2>
+      <select id="mes">
+        <option>Junho 2025</option>
+        <option>Maio 2025</option>
+        <option>Abril 2025</option>
+        <option>Março 2025</option>
+        <option>Fevereiro 2025</option>
+        <option>Janeiro 2025</option>
+      </select>
+    </section>
+
+    <section class="cards-container">
+      <div class="card">
+        <h3>Visão geral do consumo</h3>
+        <div class="info-grid">
+          <div class="info">
+            <p>Total de refeições</p>
+            <strong id="total-refeicoes">--</strong>
+          </div>
+          <div class="info">
+            <p>Média de calorias/dia</p>
+            <strong id="media-calorias">--</strong>
+          </div>
+          <div class="info">
+            <p>Mais usado</p>
+            <strong id="mais-usado">--</strong>
+          </div>
+        </div>
+        <div class="refeicoes">
+          <p>Café da manhã</p>
+          <p>Almoço</p>
+          <p>Jantar</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Insights sobre resíduos e sustentabilidade</h3>
+        <div class="info-grid">
+          <div class="info">
+            <p>Desperdício Alimentar</p>
+            <strong id="desperdicio">--</strong>
+          </div>
+          <div class="info">
+            <p>CO₂ Salvo</p>
+            <strong id="co2">--</strong>
+          </div>
+        </div>
+        <h4>Itens frequentemente desperdiçados</h4>
+        <ul id="lista-desperdicio"></ul>
+
+        <div class="dica">
+          <h5>Dica do mês</h5>
+          <p id="dica">--</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="analise">
+      <h3>Análise Semanal</h3>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

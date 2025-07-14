@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Criar Receita - NutriHealth</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+ <header class="header">
+  <a href="../Tela-de-Perfil/index.html" class="back-arrow" aria-label="Voltar para a página anterior">
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
+  </a>
+  <a href="../Tela-inicial/index.html" class="logo">NutriHealth</a>
+</header>
+
+  <main>
+    <h1>Criar receita</h1>
+
+    <label class="label-input">Título
+      <input type="text" id="titulo" placeholder="Digite o título"/>
+    </label>
+
+    <label class="label-input">Modo de preparo
+      <textarea id="preparo" placeholder="Digite o modo de preparo em tópicos"></textarea>
+    </label>
+
+    <button id="btn-novo-ingrediente" class="create" type="button">Criar novo ingrediente</button>
+
+    <div class="ingredientes-checkboxes" id="ingredientes-container">
+      <strong>Ingredientes disponíveis:</strong><br />
+    </div>
+
+    <div class="side-buttons">
+      <label class="file-upload">
+        <input type="file" id="imagem"/>
+        <span id="fileLabel">Carregar imagem</span>
+      </label>
+      
+      <select id="impacto">
+        <option disabled selected>Impacto ambiental</option>
+        <option value="Baixo">Baixo</option>
+        <option value="Médio">Médio</option>
+        <option value="Alto">Alto</option>
+      </select>
+    </div>
+
+    <div class="filtros">
+      <h3>Selecione os filtros</h3>
+      <div class="filtros-box">
+        <div>
+          <strong>Tipo de dieta:</strong><br/>
+          <label><input type="checkbox" value="Vegetariana"/> Vegetariana</label><br/>
+          <label><input type="checkbox" value="Vegana"/> Vegana</label><br/>
+          <label><input type="checkbox" value="Low carb"/> Low carb</label><br/>
+          <label><input type="checkbox" value="Sem glúten"/> Sem glúten</label><br/>
+          <label><input type="checkbox" value="Sem lactose"/> Sem lactose</label>
+        </div>
+        <div>
+          <strong>Tipo de refeição:</strong><br/>
+          <label><input type="checkbox" value="Café da manhã"/> Café da manhã</label><br/>
+          <label><input type="checkbox" value="Almoço"/> Almoço</label><br/>
+          <label><input type="checkbox" value="Jantar"/> Jantar</label><br/>
+          <label><input type="checkbox" value="Lanches"/> Lanches</label><br/>
+          <label><input type="checkbox" value="Sobremesas"/> Sobremesas</label>
+        </div>
+        <div>
+          <strong>Estilo de preparo:</strong><br/>
+          <label><input type="checkbox" value="Assado"/> Assado</label><br/>
+          <label><input type="checkbox" value="Cozinhado"/> Cozinhado</label><br/>
+          <label><input type="checkbox" value="Grelhado"/> Grelhado</label><br/>
+          <label><input type="checkbox" value="Cru"/> Cru</label><br/>
+          <label><input type="checkbox" value="Air fryer"/> Air fryer</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-buttons">
+      <button class="delete" type="button">Excluir</button>
+      <button class="create" type="button" onclick="criarJson()">Criar</button>
+    </div>
+  </main>
+
+  <!-- Modal para criação de ingrediente -->
+  <div id="modal-ingrediente" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2>Criar novo ingrediente</h2>
+      <input type="text" id="novo-nome" placeholder="Nome do ingrediente" />
+      <input type="number" id="novo-quantidade" placeholder="Quantidade" />
+      <input type="text" id="novo-unidade" placeholder="Unidade de medida" />
+      <select id="novo-impacto">
+        <option disabled selected>Impacto ambiental</option>
+        <option value="Baixo">Baixo</option>
+        <option value="Médio">Médio</option>
+        <option value="Alto">Alto</option>
+      </select>
+      <button id="salvar-ingrediente" class="create" type="button">Salvar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

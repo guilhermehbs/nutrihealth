@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriHealth - Receitas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+     <a href="../Tela-inicial/index.html" class="logo">NutriHealth</a>
+    <a href="../Tela-de-Perfil/index.html" class="profile-link">Acessar perfil</a>
+    <input type="text" class="search-bar" placeholder="Buscar..." />
+  </header>
+
+  <main class="main-container">
+    <aside class="sidebar">
+      <div class="user-info">
+        <img src="perfil.png" alt="Usuário" class="user-avatar" />
+        <p id="user-greeting"></p>
+      </div>
+
+      <div class="filters">
+        <h3>Filtros</h3>
+
+        <div>
+          <strong>Tipo de dieta:</strong><br />
+          <label><input type="checkbox" name="dieta" value="Vegetariana" /> Vegetariana</label><br />
+          <label><input type="checkbox" name="dieta" value="Vegana" /> Vegana</label><br />
+          <label><input type="checkbox" name="dieta" value="Low carb" /> Low carb</label><br />
+          <label><input type="checkbox" name="dieta" value="Sem glúten" /> Sem glúten</label><br />
+          <label><input type="checkbox" name="dieta" value="Sem lactose" /> Sem lactose</label>
+        </div>
+
+        <div>
+          <strong>Tipo de refeição:</strong><br />
+          <label><input type="checkbox" name="refeicao" value="Café da manhã" /> Café da manhã</label><br />
+          <label><input type="checkbox" name="refeicao" value="Almoço" /> Almoço</label><br />
+          <label><input type="checkbox" name="refeicao" value="Jantar" /> Jantar</label><br />
+          <label><input type="checkbox" name="refeicao" value="Lanches" /> Lanches</label><br />
+          <label><input type="checkbox" name="refeicao" value="Sobremesas" /> Sobremesas</label>
+        </div>
+
+        <div>
+          <strong>Estilo de preparo:</strong><br />
+          <label><input type="checkbox" name="preparo" value="Assado" /> Assado</label><br />
+          <label><input type="checkbox" name="preparo" value="Cozinhado" /> Cozinhado</label><br />
+          <label><input type="checkbox" name="preparo" value="Grelhado" /> Grelhado</label><br />
+          <label><input type="checkbox" name="preparo" value="Cru" /> Cru</label><br />
+          <label><input type="checkbox" name="preparo" value="Air fryer" /> Air fryer</label>
+        </div>
+
+        <button class="apply-button">Aplicar</button>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="recipes">
+        <h2>Receitas</h2>
+        <div id="recipes-list" class="recipe-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
