@@ -1,29 +1,18 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Nutrihealth
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Silva
+    given-names: Guilherme Henrique Braga e
 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-    keywords:
-    - 
-repository-code: 
-license: CC-BY-4.0
+keywords:
+  - Flask
+  - PostgreSQL
+  - Docker
+  - API
+  - Frontend
+  - Pytest
+repository-code: https://github.com/guilhermehbs/nutrihealth.git
+license: GPL-3.0
 version: 1.0.0
-date-released:
+date-released: 2025-07-14

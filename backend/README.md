@@ -53,7 +53,7 @@ Este projeto é uma API RESTful desenvolvida com [Flask](https://flask.palletspr
 
 ```bash
 git clone https://github.com/ICEI-PUC-Minas-PSG-ADS-TI/psg-ads-2025-1-p5-proj-tiai-t1-nutrihealth.git
-cd psg-ads-2025-1-p5-proj-tiai-t1-nutrihealth
+cd nutrihealth
 ```
 
 ### 2. Crie o arquivo `.env`
@@ -61,19 +61,13 @@ cd psg-ads-2025-1-p5-proj-tiai-t1-nutrihealth
 ```env
 FLASK_DEBUG=0 or 1 to active debug
 FLASK_ENV=development or production
-DATABASE_URL=postgresql://<user>:<password>@db:5432/<database>
+DATABASE_URL=postgresql://<user>:<password>@nutrihealth_db:5432/<database>
 POSTGRES_DB=
 POSTGRES_USER=
 POSTGRES_PASSWORD=
 ```
 
 ### 3. Suba os containers
-
-```bash
-docker-compose up --build
-```
-
-> A API estará disponível em: http://localhost:5000
 
 **Se não for a primeira vez rodando o projeto, siga esses passos:**
 
@@ -102,27 +96,43 @@ docker-compose up
 
 > Isso é mais rápido e mantém os containers existentes.
 
+> A API estará disponível em: http://localhost:5000
+
 ---
 
 ## Rodar Testes
 
 ```bash
-docker-compose exec web pytest
+docker-compose exec nutrihealth pytest
 ```
 
 ---
 
-## 📬 Principais Endpoints
-
-| Método | Rota           | Descrição                  |
-|--------|----------------|----------------------------|
-| GET    | /test   | Verifica se a API está online |
-| GET    | /users         | Lista todos os usuários    |
-| POST   | /users         | Cria um novo usuário       |
-| GET    | /vendas   | Lista todas as vendas|
-| POST   | /vendas         | Cria uma nova venda       |
-| PUT    | /vendas/<id>    | Atualiza uma venda     |
-| DELETE | /users/<id>    | Remove uma venda         |
+| Method | Rota                        | Descrição                                         |
+|--------|-----------------------------|---------------------------------------------------|
+| POST   | /auth/register              | Registers a new user.                             |
+| POST   | /auth/login                 | Logs in a user and returns an access token.       |
+| GET    | /profile                    | Retrieves the profile of the current authenticated user. |
+| GET    | /profile/my_recipes         | Retrieves recipes created by the current user.    |
+| GET    | /users                      | Lists all registered users.                       |
+| PUT    | /users/<int:id>             | Updates user details by ID.                       |
+| DELETE | /users/<int:id>             | Deletes a user by ID.                             |
+| POST   | /recipes                    | Creates a new recipe.                             |
+| GET    | /recipes                    | Retrieves all recipes.                            |
+| GET    | /recipes/<int:recipe_id>    | Retrieves details of a specific recipe by ID.     |
+| POST   | /recipes/save/<int:recipe_id> | Saves a recipe to the user's saved recipes.       |
+| GET    | /profile/saved_recipes      | Retrieves recipes saved by the current user.      |
+| DELETE | /recipes/<int:recipe_id>    | Deletes a recipe by ID.                           |
+| GET    | /recipes/user               | Retrieves recipes created by the current authenticated user. |
+| POST   | /ingredientes               | Creates a new ingredient.                         |
+| GET    | /ingredientes               | Retrieves all ingredients for the current user.   |
+| GET    | /ingredientes/<int:ingrediente_id> | Retrieves details of a specific ingredient by ID. |
+| PUT    | /ingredientes/<int:ingrediente_id> | Updates an ingredient by ID.                      |
+| DELETE | /ingredientes/<int:ingrediente_id> | Deletes an ingredient by ID.                      |
+| POST   | /planejamento               | Creates or updates a weekly meal plan entry.      |
+| GET    | /planejamento               | Lists the weekly meal plan for the current user.  |
+| POST   | /dashboard                  | Saves dashboard data (e.g., monthly report)       |
+| GET    | /dashboard                  | Retrieves dashboard data (e.g., monthly report) for a specific month. |
 
 ---
 
@@ -171,11 +181,10 @@ volumes:
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
+Este projeto está licenciado sob a [GPL-3.0](../LICENSE).
 
 ---
 
 ## Autor
 Feito por:
 - [Guilherme](https://github.com/guilhermehbs).
-- [Yago]().
