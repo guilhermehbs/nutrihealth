@@ -1,50 +1,39 @@
 # NutriHealth
 
-`CURSO` Análise e Desenvolvimento de Sitemas
+`Course` Systems Analysis and Development
 
-`DISCIPLINA` Trabalho Insterdisciplinar Aplicações Inovadores
+`DISCIPLINE` Interdisciplinary work Innovative applications
 
-`SEMESTRE` Quinto Semestre
+`Semester` Fifth Semester
 
-Este software auxilia as pessoas a planejar refeições saudáveis e sustentáveis, levando em conta o impacto ambiental dos alimentos. Ele sugere receitas com base nos ingredientes disponíveis, incentivando o aproveitamento total dos alimentos e reduzindo o desperdício. Além disso, prioriza o consumo de produtos locais e da estação, ajudando os usuários a fazer escolhas mais ecológicas. Com uma interface intuitiva, a ferramenta atende desde famílias que querem otimizar suas compras até nutricionistas que desejam promover hábitos alimentares mais responsáveis.
+This software helps people plan healthy and sustainable meals, taking into account the environmental impact of food. It suggests recipes based on the ingredients available, encouraging the full use of food and reducing waste. In addition, it prioritizes the consumption of local and seasonal products, helping users to make greener choices. With an intuitive interface, the tool caters for families who want to optimize their shopping and nutritionists who want to promote more responsible eating habits.
 
-ODS Alinhados:
-
-## Integrantes
+## Members
 
 * Guilherme Henrique Braga e Silva
 
-## Instruções de utilização
+## Instructions for use
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+<li><a href="backend/README.md">Instructions</a></li>
 
-# Documentação
+# Documentation
 
 <ol>
-<li><a href="docs/1-Contexto.md"> Documentação de Contexto</a></li>
-<li><a href="docs/2-Planejamento-Projeto.md"> Planejamento do Projeto</a></li>
-<li><a href="docs/3-Especificação.md"> Especificação do Projeto</a></li>
-<li><a href="docs/4-Projeto-Solucao.md"> Projeto da solução</a></li>
-<li><a href="docs/5-Interface-Sistema.md"> Interface do Sistema</a></li>
-<li><a href="docs/6-Conclusão.md"> Conclusão</a></li>
-<li><a href="docs/7-Referências.md"> Referências</a></li>
+<li><a href="docs/1-Context.md"> Context Documentation</a></li>
+<li><a href="docs/2-Specification.md"> Project Specification</a></li>
+<li><a href="docs/3-Project-Solution.md"> Project Solution</a></li>
+<li><a href="docs/4-System-Interface.md"> System Interface</a></li>
+<li><a href="docs/5-Conclusion.md"> Conclusion</a></li>
+<li><a href="docs/6-References.md"> References</a></li>
 </ol>
 
-# Código
-
-<li><a href="backend/README.md"> Código Fonte</a></li>
-
-# Apresentação
+# Presentation
 
 <li><a href="docs/presentation/README.md"> Apresentação da solução</a></li>
 
 
-## Histórico de versões
+## Version history
 
-* 0.1.1
-    * CHANGE: Atualização das documentações. Código permaneceu inalterado.
-* 0.1.0
-    * Implementação da funcionalidade X pertencente ao processo P.
-* 0.0.1
-    * Trabalhando na modelagem do processo de negócio.
+* 1.0.0
+    * Publishing the first version of the software
 
